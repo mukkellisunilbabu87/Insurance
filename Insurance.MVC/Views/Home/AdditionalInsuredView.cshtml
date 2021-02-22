@@ -1,0 +1,71 @@
+﻿@model Insurance.Common.DTO.MasterModel
+
+<table id="AdditionalInsuredTable">
+    @foreach (var s in Model.AdditionalInsureds)
+    {
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td style="background-color:darkkhaki">
+                            Additional Insured
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        FirstName:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" value="@s.FirstName" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Date Of Birth:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" value="@s.DateOfBirth" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Coverage:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" value="@s.InsuranceCoverage" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Delete" id="btn_@s.AdditionalInsuredId" onclick="RemoveAdditionalInsured(@s.AdditionalInsuredId, @s.PersonId, @s.QuoteId)" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,27 @@
+﻿@model Insurance.Common.DTO.MasterModel
+
+<table id="searchData" class="SearchDataTable">
+    <tr>
+        <th class="SearchDataCell">Name</th>
+        <th class="SearchDataCell">DoB</th>
+        <th class="SearchDataCell">Add to Quote</th>
+    </tr>
+    @foreach (var s in Model.SearchResult)
+    {
+        <tr>
+            <td>
+                @s.FullName
+            </td>
+            <td>
+                @s.DateOfBirth
+            </td>
+            <td>
+                <input type="button" id="sd_@s.PersonId" value="Select" onclick="GetAdditionalInsured(@s.PersonId, @s.PersonId, @s.QuoteId)" />
+            </td>
+        </tr>
+    }
+</table>
+
+<div id="noRecords" style="width:100%; align-items:center">
+    <label style="font:400; align-items: center">Records not found</label>
+</div>

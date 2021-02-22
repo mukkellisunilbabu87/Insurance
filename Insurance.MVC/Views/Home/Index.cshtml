@@ -1,0 +1,118 @@
+﻿@model Insurance.Common.DTO.MasterModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div>
+            <div>
+                @Html.HiddenFor(q => q.Quote.QuoteId)
+            </div>
+            <table style="width:100%">
+                <tr>
+                    <td style="background-color:darkkhaki">
+                        Quote
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>
+                                                Quote: <b>@Html.DisplayFor(q => q.Quote.Number)</b>
+                                            </td>
+                                            <td>
+                                                Status: <select id="quoteStatus">
+                                                    <option value="false">Pending</option>
+                                                    <option value="true">Issued</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                Applicant: <b>@Html.DisplayFor(q => q.Quote.Applicant)</b>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>
+                                                Quote Date: <b>@Html.DisplayFor(q => q.Quote.Date)</b>
+                                            </td>
+                                            <td>
+                                                Effective Date: <b>@Html.DisplayFor(q => q.Quote.EffectiveDate)</b>
+                                            </td>
+                                            <td>
+                                                <input type="radio" id="premiumOption_1" name="PremiumOptions" value="Basic">
+                                                <label for="premiumOption_1">Basic: <b>$ 680.00</b></label>
+                                                <input type="radio" id="premiumOption_2" name="PremiumOptions" value="Preferred">
+                                                <label for="premiumOption_2">Preferred: <b>$ 850.00</b></label>
+                                                <input type="radio" id="premiumOption_3" name="PremiumOptions" value="Premier">
+                                                <label for="premiumOption_3">Premier: <b>$ 1050.00</b></label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="width:100%">
+                <tr>
+                    <td style="background-color:darkkhaki">
+                        Search
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>
+                                                <div>FirstName:</div>
+                                                <div>
+                                                    <input type="text" id="iFirstName" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>LastName:</div>
+                                                <div>
+                                                    <input type="text" id="iLastName" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <input type="button" id="btnSearch" value="Search" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <label id="warningMsg" style="color:red;">Please fill the search fields with proper values.</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @Html.Partial("SearchPeopleView", Model)
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            @Html.Partial("AdditionalInsuredView", Model)
+        </div>
+    </div>
+}
