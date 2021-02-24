@@ -3,6 +3,9 @@ using Insurance.Common.Constants;
 
 namespace Insurance.MVC.Providers
 {
+    /// <summary>
+    /// Url Provider
+    /// </summary>
     public class UrlProvider
     {
         public static string QuoteUrl
