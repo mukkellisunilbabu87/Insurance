@@ -6,6 +6,9 @@ using Insurance.Common.DTO;
 
 namespace Insurance.Business
 {
+    /// <summary>
+    /// Insurance business class.
+    /// </summary>
     public class InsuranceBusiness : IInsuranceBusiness
     {
         private readonly IInsuranceUOW insuranceUOW;
