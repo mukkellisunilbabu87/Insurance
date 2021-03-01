@@ -7,6 +7,9 @@ using Insurance.Common.DTO;
 
 namespace Insurance.Common.Business
 {
+    /// <summary>
+    /// Interface for insurance business
+    /// </summary>
     public interface IInsuranceBusiness
     {
         Quote GetQuoteDetails();
