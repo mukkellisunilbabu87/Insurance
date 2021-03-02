@@ -3,6 +3,9 @@ using Insurance.Common.DTO;
 
 namespace Insurance.Common.DataAccess
 {
+    /// <summary>
+    /// Interface for insurance repository
+    /// </summary>
     public interface IInsuranceRepository
     {
         Quote QuoteInfo { get; }

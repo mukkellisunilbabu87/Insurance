@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Insurance.Common.DataAccess
 {
+    /// <summary>
+    /// Interface for unit of work for insurance.
+    /// </summary>
     public interface IInsuranceUOW
     {
         IInsuranceRepository RepositoryInstance { get; }
