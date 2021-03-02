@@ -27,6 +27,11 @@ namespace Insurance.Business
             }
         }
 
+        /// <summary>
+        /// Find people
+        /// </summary>
+        /// <param name="filter">Search filter criteria.</param>
+        /// <returns>Returns list of search results.</returns>
         public List<SearchResult> FindPeople(SearchFilter filter)
         {
             var searchResult = from p in insuranceUOW.RepositoryInstance.People
