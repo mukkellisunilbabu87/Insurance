@@ -7,7 +7,7 @@ using Insurance.Common.DTO;
 namespace Insurance.WebAPI.Controllers
 {
     /// <summary>
-    /// Insurance controller class.
+    /// Insurance controller class .
     /// </summary>
     [RoutePrefix("api/insurance")]
     public class InsuranceController : ApiController
