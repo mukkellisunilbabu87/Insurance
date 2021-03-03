@@ -7,7 +7,7 @@ using Insurance.Common.DTO;
 namespace Insurance.Business
 {
     /// <summary>
-    /// Insurance business class .
+    /// Insurance business class test.
     /// </summary>
     public class InsuranceBusiness : IInsuranceBusiness
     {
